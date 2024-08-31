@@ -1,0 +1,183 @@
+{
+  "root": true,
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module"
+  },
+  "plugins": ["@typescript-eslint"],
+  "extends": [
+    "eslint:recommended",
+    "plugin:import/recommended",
+    "plugin:import/typescript",
+    "plugin:jsx-a11y/recommended",
+    "plugin:react/all",
+    "plugin:react/jsx-runtime",
+    "plugin:react-hooks/recommended",
+    "plugin:@typescript-eslint/recommended"
+    //"prettier"
+  ],
+  "rules": {
+    "@typescript-eslint/naming-convention": "warn",
+    "@typescript-eslint/semi": "warn",
+    "semi": "off",
+    "array-callback-return": "warn",
+    "no-constant-binary-expression": "warn",
+    "no-constructor-return": "error",
+    "no-duplicate-imports": "error",
+    "no-new-native-nonconstructor": "error",
+    "no-self-compare": "error",
+    "no-unused-private-class-members": "error",
+    "no-use-before-define": "error",
+    "require-atomic-updates": "warn",
+    "arrow-body-style": ["warn", "as-needed"],
+    "block-scoped-var": "error",
+    "class-methods-use-this": "warn",
+    "complexity": ["warn", 3],
+    "@stylistic/quotes": ["error", "double"],
+    "consistent-this": ["error", "self"],
+    "curly": ["error", "curly"],
+    "default-case": "error",
+    "default-case-last": "error",
+    "default-param-last": "error",
+    "dot-notation": ["error", { "allowKeywords": false }],
+    "eqeqeq": "error",
+    "max-classes-per-file": ["error", 1],
+    "max-depth": ["error", 3],
+    "max-lines": ["warn", 300, { "skipComments": true }],
+    "max-lines-per-function": ["warn", 20, { "skipComments": true }],
+    "max-nested-callbacks": ["warn", 3],
+    "max-params": ["error", 3],
+    "multiline-comment-style": ["warn", "starred-block"],
+    "no-array-constructor": "error",
+    "no-console": ["error", { "allow": ["warn", "error"] }],
+    "no-else-return": "error",
+    "no-eq-null": "error",
+    "no-extra-bind": "error",
+    "no-implicit-coercion": "error",
+    "no-implicit-globals": "error",
+    "no-invalid-this": "error",
+    "no-lonely-if": "error",
+    "no-loop-func": "error",
+    "no-magic-numbers": "error",
+    "no-multi-assign": "error",
+    "no-multi-str": "error",
+    "no-negated-condition": "error",
+    "no-new-wrappers": "error",
+    "no-param-reassign": "error",
+    "no-plusplus": "error",
+    "no-shadow": "error",
+    "no-throw-literal": "error",
+    "no-undef-init": "error",
+    "no-unneeded-ternary": "error",
+    "no-useless-call": "error",
+    "no-useless-catch": "error",
+    "no-useless-constructor": "error",
+    "no-useless-rename": "error",
+    "no-useless-return": "error",
+    "no-var": "error",
+    "no-warning-comments": "error",
+
+    "react/no-array-index-key": "error",
+
+    "@stylistic/arrow-parens": ["error", "always"],
+    "@stylistic/arrow-spacing": ["error", { "before": true, "after": true }]
+  },
+  "ignorePatterns": ["out", "dist", "**/*.d.ts", "src/test/test_apps/*"],
+  "new": {
+    "overrides": [
+      {
+        // enable eslint-plugin-testing-library rules or preset only for matching files!
+        "files": ["**/?(*.)+(test).[jt]s?(x)"],
+        "extends": [
+          "plugin:jest/recommended",
+          "plugin:jest-dom/recommended",
+          "plugin:testing-library/react"
+        ]
+      },
+      {
+        "files": ["**/*.ts?(x)"],
+        "parser": "@typescript-eslint/parser",
+        "extends": [
+          "plugin:@typescript-eslint/recommended",
+          "plugin:import/typescript"
+        ]
+      }
+    ],
+    "plugins": ["@stylistic"],
+    "rules": {
+      "array-callback-return": "warn",
+      "no-constant-binary-expression": "warn",
+      "no-constructor-return": "error",
+      "no-duplicate-imports": "error",
+      "no-new-native-nonconstructor": "error",
+      "no-self-compare": "error",
+      "no-unused-private-class-members": "error",
+      "no-use-before-define": "error",
+      "require-atomic-updates": "warn",
+      "arrow-body-style": ["warn", "as-needed"],
+      "block-scoped-var": "error",
+      "class-methods-use-this": "warn",
+      "complexity": ["warn", 3],
+      "@stylistic/quotes": ["error", "double"],
+      "consistent-this": ["error", "self"],
+      "curly": ["error", "curly"],
+      "default-case": "error",
+      "default-case-last": "error",
+      "default-param-last": "error",
+      "dot-notation": ["error", { "allowKeywords": false }],
+      "eqeqeq": "error",
+      "max-classes-per-file": ["error", 1],
+      "max-depth": ["error", 3],
+      "max-lines": ["warn", 300, { "skipComments": true }],
+      "max-lines-per-function": ["warn", 20, { "skipComments": true }],
+      "max-nested-callbacks": ["warn", 3],
+      "max-params": ["error", 3],
+      "multiline-comment-style": ["warn", "starred-block"],
+      "no-array-constructor": "error",
+      "no-console": ["error", { "allow": ["warn", "error"] }],
+      "no-else-return": "error",
+      "no-eq-null": "error",
+      "no-extra-bind": "error",
+      "no-implicit-coercion": "error",
+      "no-implicit-globals": "error",
+      "no-invalid-this": "error",
+      "no-lonely-if": "error",
+      "no-loop-func": "error",
+      "no-magic-numbers": "error",
+      "no-multi-assign": "error",
+      "no-multi-str": "error",
+      "no-negated-condition": "error",
+      "no-new-wrappers": "error",
+      "no-param-reassign": "error",
+      "no-plusplus": "error",
+      "no-shadow": "error",
+      "no-throw-literal": "error",
+      "no-undef-init": "error",
+      "no-unneeded-ternary": "error",
+      "no-useless-call": "error",
+      "no-useless-catch": "error",
+      "no-useless-constructor": "error",
+      "no-useless-rename": "error",
+      "no-useless-return": "error",
+      "no-var": "error",
+      "no-warning-comments": "error",
+
+      "react/no-array-index-key": "error",
+
+      "@stylistic/arrow-parens": ["error", "always"],
+      "@stylistic/arrow-spacing": ["error", { "before": true, "after": true }]
+    },
+    "settings": {
+      "import/parsers": {
+        "@typescript-eslint/parser": [".ts", ".tsx"]
+      },
+      "import/resolver": {
+        "typescript": {}
+      },
+      "react": {
+        "version": "detect"
+      }
+    }
+  }
+}

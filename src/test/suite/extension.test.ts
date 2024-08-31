@@ -1,5 +1,4 @@
-import { describe, suite , test, before} from 'mocha';
-import { expect } from 'chai';
+import { describe, suite , test, expect, beforeEach } from 'vitest';
 
 // You can import and use all API from the 'vscode' module
 // as well as import your extension to test it
@@ -11,7 +10,7 @@ suite('Extension Test Suite', () => {
 
 	describe('Sapling loads correctly', () => {
     let saplingExtension;
-    before (() => {
+    beforeEach(() => {
       saplingExtension = vscode.extensions.getExtension('team-sapling.sapling');
     });
 
