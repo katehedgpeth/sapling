@@ -14,8 +14,8 @@
     "plugin:react/all",
     "plugin:react/jsx-runtime",
     "plugin:react-hooks/recommended",
-    "plugin:@typescript-eslint/recommended"
-    //"prettier"
+    "plugin:@typescript-eslint/recommended",
+    "prettier"
   ],
   "rules": {
     "@typescript-eslint/naming-convention": "warn",

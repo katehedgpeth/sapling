@@ -88,7 +88,7 @@
 	"scripts": {
 		"dev": "vite",
 		"build": "tsc && vite build",
-		"test": "vitest --no-watch",
+		"test": "vitest",
 		"serve": "vite preview",
 		"prepare": "husky install",
 		"commit": "commit",
@@ -96,9 +96,12 @@
 		"lint": "eslint --cache ./src"
 	},
 	"dependencies": {
+		"@babel/parser": "^7.25.6",
+		"@mui/material": "^6.1.0",
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0",
 		"react-error-boundary": "^3.1.4",
+		"rollup": "^4.21.2",
 		"vite-plugin-svgr": "2.4.0"
 	},
 	"devDependencies": {
